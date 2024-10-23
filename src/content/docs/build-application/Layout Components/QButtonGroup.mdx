@@ -1,0 +1,33 @@
+---
+title: QButtonGroup
+description: How to use QButtonGroup in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QButtonGroup** provides an abstract container into which button widgets can be added. it does not provide any visual representation of this container.
+
+## Example
+
+export const qButtonGroupExample = `
+import { QButtonGroup, QWidget, QLabel, QButton } from '@vixen-js/core';
+
+const widget = new QWidget();
+const group = new QButtonGroup();
+
+const button1 = new QButton();
+button1.setText("Button 1");
+button1.setObjectName("button1");
+group.addButton(button1);
+
+const button2 = new QButton();
+button2.setText("Button 2");
+button2.setObjectName("button2");
+group.addButton(button2);
+
+widget.setLayout(group);
+`;
+
+<Code code={qButtonGroupExample} title='example_group.ts' lang='ts' />
+
+Learn more about `QButtonGroup` in: https://doc.qt.io/qt-6/qbuttongroup.html

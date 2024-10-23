@@ -1,0 +1,34 @@
+---
+title: QStackedWidget
+description: How to use QStackedWidget in your application
+---
+import { Code } from '@astrojs/starlight/components';
+
+> The **QStackedWidget** provides a stack of widgets where only one widget is visible at a time.
+
+## Example
+
+export const qStackedWidgetExample = `
+import { QStackedWidget, QWidget, QLabel, QMainWindow } from '@vixen-js/core';
+
+const win = new QMainWindow();
+
+const stack = new QStackedWidget();
+
+const first = new QLabel();
+first.setText("First");
+
+const  second = new QLabel();
+second.setText("Second");
+
+stack.addWidget(first);
+stack.addWidget(second);
+
+win.setCentralWidget(stack);
+win.resize(300, 300);
+win.show();
+`;
+
+<Code  code={qStackedWidgetExample} lang='ts' title='example_stacked.ts' />
+
+Learn more about `QStackedWidget` in: https://doc.qt.io/qt-6/qstackedwidget.html

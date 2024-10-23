@@ -1,0 +1,71 @@
+---
+title: FlexLayout
+description: About Layout in Vixen UI
+---
+import { Code } from '@astrojs/starlight/components';
+
+> **FlexLayout** is a custom component that helps to layout all children widgets using flexbox
+
+A `FlexLayout` can be used to layout all children widgets using flex.
+
+### Example
+
+export const flexExample = `
+import { FlexLayout, QWidget, QLabel } from '@vixen-js/core';
+
+const view = new QWidget();
+const flex = new FlexLayout();
+flex.setObjectName("flex_layout");
+view.setLayout(flex);
+
+const title = new QLabel();
+title.setText("Hello World");
+
+const subtitle = new QLabel();
+subtitle.setText("This is a subtitle");
+
+flex.addWidget(title);
+flex.addWidget(subtitle);
+`;
+
+<Code code={flexExample} title='flex.ts' lang='ts' />
+
+On this example you can see how `FlexLayout` can be used to layout all children widgets. You can style this flex container with CSS using the Object Name.
+
+export const cssStyleExample = `
+#flex_layout {
+    flex-direction: column;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+`;
+
+<Code code={cssStyleExample} title='flex.css' lang='css' />
+
+Now you can set this stylesheet in your `main.ts` file.
+
+export const flexWithCssExample = `
+import { FlexLayout, QWidget, QLabel } from '@vixen-js/core';
+import styles from './flex.css?raw'; // New
+
+const view = new QWidget();
+const flex = new FlexLayout();
+flex.setObjectName("flex_layout");
+view.setLayout(flex);
+
+const title = new QLabel();
+title.setText("Hello World");
+
+const subtitle = new QLabel();
+subtitle.setText("This is a subtitle");
+
+flex.addWidget(title);
+flex.addWidget(subtitle);
+view.setStyleSheet(String(styles)); // New
+`;
+
+export const highlights = ["view.setStyleSheet(String(styles));", "import styles from './flex.css?raw';"];
+
+<Code code={flexWithCssExample} title='flex.ts' lang='ts' mark={highlights} />
+

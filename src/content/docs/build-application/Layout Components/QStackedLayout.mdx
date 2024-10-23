@@ -1,0 +1,69 @@
+---
+title: QStackedLayout
+description: How to use StackedLayout in your application
+---
+import { Code } from '@astrojs/starlight/components';
+
+> **QStackedLyout** provides a stack of widgets where only one widget is visible at a time.
+
+## Example
+
+export const qStackedLayoutExample = `
+import { QStackedLayout, QWidget, QLabel, QBoxLayout, QCombobox, FlexLayout } from '@vixen-js/core';
+
+const widget = new QWidget();
+widget.setObjectName("root");
+
+const rootLayout = new QBoxLayout(Direction.TopToBottom);
+root.setLayout(rootLayout);
+
+const stack = new QStackedLayout();
+
+const page1 = new QWidget();
+const page1_layout = new FlexLayout()
+page1.setLayout(page1_layout);
+const title = new QLabel();
+title.setText("Page 1");
+page1_layout.addWidget(title);
+
+const page2 = new QWidget();
+const page2_layout = new FlexLayout()
+page2.setLayout(page2_layout);
+const title2 = new QLabel();
+title2.setText("Page 2");
+page2_layout.addWidget(title2);
+
+const page3 = new QWidget();
+const page3_layout = new FlexLayout()
+page3.setLayout(page3_layout);
+const title3 = new QLabel();
+title3.setText("Page 3");
+page3_layout.addWidget(title3);
+
+stack.addWidget(page1);
+stack.addWidget(page2);
+stack.addWidget(page3);
+
+const combo = new QCombobox();
+combo.addItems(["Page 1", "Page 2", "Page 3"]);
+
+combo.addEventListener("currentIndexChanged", (idx) => {
+    stack.setCurrentIndex(idx);
+})
+
+root.addWidget(combo);
+
+const currentIdx = new QLabel();
+currentIdx.setText(\`current Index: \${stack.currentIndex().toString()}\`);
+
+stack.addEventListener("currentChanged", (idx) => {
+    currentIdx.setText(\`current Index: \${idx}\`);
+})
+
+root_layout.addWidget(currentIdx);
+root_layout.addWidget(stack);
+`;
+
+<Code code={qStackedLayoutExample} title='example_stacked.ts' lang='ts' />
+
+Learn more about `QStackedLayout` in: https://doc.qt.io/qt-6/qstackedlayout.html

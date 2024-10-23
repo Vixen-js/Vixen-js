@@ -1,0 +1,32 @@
+---
+title: QGridLayout
+description: How to use QGridLayout in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QGridLayout** is a layout manager that organizes widgets in a __grid__ layout.
+
+## Example
+
+export const qGridLayoutExample = `
+import { QGridLayout, QWidget, QLabel } from '@vixen-js/core';
+
+const view = new QWidget();
+const grid = new QGridLayout();
+
+view.setLayout(grid);
+
+const title = new QLabel();
+title.setText("Hello World");
+
+const subtitle = new QLabel();
+subtitle.setText("This is a subtitle");
+
+grid.addWidget(title);
+grid.addWidget(subtitle);
+`;
+
+<Code code={qGridLayoutExample} title='example_grid.ts' lang='ts' />
+
+Learn More about `QGridLayout` in: https://doc.qt.io/qt-6/qgridlayout.html

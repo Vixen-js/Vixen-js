@@ -1,0 +1,40 @@
+---
+title: Welcome to Vixen UI
+description: Get started building your docs site with Starlight.
+template: splash
+hero:
+  tagline: Build extremely fast and light weight Desktop applications with Typescript and CSS Like Styling.
+  image:
+    file: ../../assets/Vixen.svg
+  actions:
+    - text: Get started
+      link: getting-started/installation/
+      icon: right-arrow
+    - text: Read the docs
+      link: build-application/
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Features
+
+<CardGrid stagger>
+	<Card title="Cross Platform" icon="starlight">
+		Vixe UI Works in Windows, Linux  & Mac
+	</Card>
+	<Card title="Ultra efficient" icon="seti:cpp">
+		Vixen UI Was based on Qt6 Cpp library, so you can build extremely cost efficient desktop UI's.
+		Currently CPU takes `0% usage` on Idle state and the memory usage for a basic program is under `20MB`. 
+	</Card>
+	<Card title="Style your app With CSS" icon="seti:css">
+		Use CSS To style your UI with full suport to `Flexbox` layout.
+	</Card>
+	<Card title="Native event listener support" icon="seti:config">
+		Thanks to [Qodejs](https://github.com/nodegui/qodejs) you can have all the Support for Events from Qt & Nodejs.
+	</Card>
+	<Card title="Build on top of Typescript" icon="seti:typescript">
+		This project was made on Typescript, but if you like to work with JS, you can use it also.
+	</Card>
+</CardGrid>

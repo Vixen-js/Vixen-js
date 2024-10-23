@@ -1,0 +1,26 @@
+---
+title: QBoxLayout
+description: Use Box Layout to organize your screens.
+---
+import { Code } from '@astrojs/starlight/components';
+
+> **QBoxLayout** is a layout manager that organizes widgets in a __horizontal__ or __vertical__ layout.
+
+## Example
+
+export const qBoxLayoutExample = `
+import { QBoxLayout, QCalendarWidget, QWidget} from '@vixen-js/core';
+
+const widget = new QWidget();
+const box = new QBoxLayout(0);
+
+box.addWidget(new QCalendarWidget());
+box.addWidget(new QCalendarWidget());
+
+widget.setLayout(box);
+`;
+
+<Code code={qBoxLayoutExample} title='example_box.ts' lang='ts'  />
+
+Learn More about `QBoxLayout` in: https://doc.qt.io/qt-6/qboxlayout.html
+

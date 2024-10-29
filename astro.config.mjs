@@ -7,6 +7,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Vixen UI",
+      description: "Vixen UI is a framework for building user interfaces.",
       social: {
         github: "https://github.com/Vixen-js",
       },

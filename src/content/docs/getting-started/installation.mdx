@@ -7,7 +7,7 @@ import { Code } from '@astrojs/starlight/components';
 
 export const outputCreate = "Creating project: test-project with default_template \nStarted git initialization \nInitialized empty Git repository in {PROJECT_DIR}/test-project/.git \nProject created successfully! \nNext steps:\n\t1. run 'cd test-project && pnpm i' to install dependencies\n\t2. Start watch server running 'pnpm watch'\n\t3. Start development application running 'pnpm dev'"
 
-export const outputInstall = "pnpm create @vixen-js/vixen my-project #if you want to use the default_template\npnpm create @vixen-js/vixen my-project --template vanilla #if you want to use the vanilla-ts template"
+export const outputInstall = "pnpm create @vixen-js/vixen my-project #if you want to use the default_template\npnpm create @vixen-js/vixen my-project --template vanilla #if you want to use the vanilla-ts template\npnpm create @vixen-js/vixen my-project --template react #if you want to use the react template"
 
 System Requirements:
 - [Node 18.12.0](https://nodejs.org/en) or higher
@@ -22,6 +22,6 @@ On Installation process, you'll see the following output:
 
 <Code code={outputCreate} lang='bash' />
 
-After the output, `@vixen-js/create-vixen` will create a folder with your proejct name with all the dependencies required to start working with Vixen UI.
+After the output, `@vixen-js/create-vixen` will create a folder with your project name with all the dependencies required to start working with Vixen UI.
 
-if you're new to Vixen UI, check out the [Tutorials](/en/building-your-application) section. 
+if you're new to Vixen UI, check out the [Tutorials](/build-application) section. 

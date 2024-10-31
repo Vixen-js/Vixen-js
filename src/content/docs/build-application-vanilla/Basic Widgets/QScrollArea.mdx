@@ -1,0 +1,29 @@
+---
+title: QScrollArea
+description: How to use QScrollArea in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QScrollArea** is a widget that provides a scroll view onto another widget.
+
+## Example
+
+export const qScrollAreaExample = `
+import path from "path";
+import { QScrollArea, QLabel, QPixmap } from '@vixen-js/core';
+
+const scrollArea = new QScrollArea();
+scrollArea.setInlineStyle("flex: 1; width: '100%';");
+
+const image = new QLabel();
+const pix = new QPixmap(
+    path.join(__dirname, "../assets/images/hello-world.png")
+);
+image.setPixmap(pix);
+scrollArea.setWidget(image);
+`;
+
+<Code code={qScrollAreaExample} title='example_scrollArea.ts' lang='ts' />
+
+Learn more about `QScrollArea` in: https://doc.qt.io/qt-6/qscrollarea.html

@@ -1,0 +1,26 @@
+---
+title: ScrollArea
+description: How to use ScrollArea in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **ScrollArea** is a widget that provides a scroll view onto another widget.
+
+## Example
+
+export const scrollAreaExample = `
+import { ScrollArea, Image } from '@vixen-js/core-react';
+
+export function ScrollAreaExample() {
+    return (
+        <ScrollArea widgetResizable={true}>
+            <Image src="./assets/hello-world.png" />
+        </ScrollArea>
+    );
+}
+`;
+
+<Code code={scrollAreaExample} title='example_scrollArea.tsx' lang='tsx' />
+
+Learn more about [`ScrollArea`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/QScrollArea)

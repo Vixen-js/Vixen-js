@@ -24,12 +24,22 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "Getting Started",
+          label: "📖 Getting Started",
           autogenerate: { directory: "getting-started" },
         },
         {
-          label: "Building your application",
-          autogenerate: { directory: "build-application" },
+          label: "⭐ Vanilla TS",
+          autogenerate: {
+            directory: "build-application-vanilla",
+            collapsed: true,
+          },
+        },
+        {
+          label: "⚛️ React",
+          autogenerate: {
+            directory: "build-application-react",
+            collapsed: true,
+          },
         },
       ],
     }),

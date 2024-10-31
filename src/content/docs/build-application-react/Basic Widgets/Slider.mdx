@@ -1,0 +1,28 @@
+---
+title: Slider
+description: How to use Slider in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Slider** is a widget that provides a slider that you can use in your application.
+
+## Example
+
+export const sliderExample = `
+import { Slider } from '@vixen-js/core-react';
+
+export function SliderExample() {
+    return (
+        <Slider 
+          value={50} 
+          minimum={0} 
+          maximum={100} 
+          tickInterval={2} />
+    )
+}
+`;
+
+<Code code={sliderExample} title='example_slider.tsx' lang='tsx' />
+
+Learn more about [`Slider`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/QSlider)

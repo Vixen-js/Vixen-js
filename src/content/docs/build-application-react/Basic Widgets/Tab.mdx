@@ -1,0 +1,28 @@
+---
+title: Tab
+description: How to use Tab in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Tab** is a widget that provides a tab widget that you can use in your application.
+
+## Example
+
+export const tabExample = `
+import { Tab, TabItem } from '@vixen-js/core-react';
+
+export function TabExample() {
+    return (
+        <Tab>
+            <TabItem text="Tab 1" />
+            <TabItem text="Tab 2" />
+            <TabItem text="Tab 3" />
+        </Tab>
+    );
+}
+`;
+
+<Code code={tabExample} title='example_tabWidget.tsx' lang='tsx' />
+
+Learn more about `Tab` in: https://doc.qt.io/qt-6/tab.html

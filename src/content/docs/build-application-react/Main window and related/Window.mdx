@@ -1,0 +1,29 @@
+---
+title: Window
+description: How to use Window in your application.
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Window** is the main Window of your application, it's the main Window of the application.
+
+## Example
+
+export const mainWindowExample = `
+import { Window, View, Text } from '@vixen-js/core-react';
+
+export function WindowExample() {
+    return (
+      <Window>
+        <View>
+          <Text>Hello World</Text>
+          <Text>Window</Text>
+        </View>
+      </Window>    
+    )
+}
+`;
+
+<Code code={mainWindowExample} title="mainWindowExample.tsx" lang='tsx' />
+
+Learn more about [`Window`](https://vixen-js.github.io/docs/build-application-vanilla/Layout-Components/QWindow)

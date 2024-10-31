@@ -1,0 +1,39 @@
+---
+title: QTableWidget
+description: How to use QTableWidget in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QTableWidget** is a widget that provides a table that you can use in your application.
+
+## Example
+
+export const qTableWidgetExample = `
+import { QTableWidget, QMainWindow, QTableWidgetItem } from '@vixen-js/core';
+
+const win = new QMainWindow();
+const table = new QTableWidget(2,3);
+table.setHorizontalHeaderLabels(["Column 1", "Column 2", "Column 3"]);
+
+const cell_0_0 = new QTableWidgetItem("Cell 0 0");
+const cell_0_1 = new QTableWidgetItem("Cell 0 1");
+
+const cell_1_0 = new QTableWidgetItem("Cell 1 0");
+const cell_1_1 = new QTableWidgetItem("Cell 1 1");
+
+table.setItem(0, 0, cell_0_0);
+table.setItem(0, 1, cell_0_1);
+table.setItem(1, 0, cell_1_0);
+table.setItem(1, 1, cell_1_1);
+
+win.setCentralWidget(table);
+win.show();
+
+// Avoid garbage collection
+(global as any).win = win;
+`;
+
+<Code code={qTableWidgetExample} title='example_tableWidget.ts' lang='ts' />
+
+Learn more about `QTableWidget` in: https://doc.qt.io/qt-6/qtablewidget.html

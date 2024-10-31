@@ -1,0 +1,46 @@
+---
+title: QTreeWidget
+description: How to use QTreeWidget in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QTreeWidget** is a widget that provides a tree view that you can use in your application.
+
+## Example
+
+export const qTreeWidgetExample = `
+import { QTreeWidget, QMainWindow, QTreeWidgetItem } from '@vixen-js/core';
+
+const win = new QMainWindow();
+const tree = new QTreeWidget();
+
+const item1 = new QTreeWidgetItem();
+item1.setText(0, "Item 1");
+const item2 = new QTreeWidgetItem();
+item2.setText(0, "Item 2");
+const item3 = new QTreeWidgetItem();
+item3.setText(0, "Item 3");
+const item4 = new QTreeWidgetItem();
+item4.setText(0, "Item 4");
+const item5 = new QTreeWidgetItem();
+item5.setText(0, "Item 5");
+
+const item6 = new QTreeWidgetItem();
+item6.setText(0, "Item 6");
+
+tree.addTopLevelItem(item1);
+tree.insertTopLevelItems(0, [item2, item3]);
+tree.addTopLevelItems([item4, item5]);
+tree.insertTopLevelItem(2, item6);
+
+win.setCentralWidget(tree);
+win.show();
+
+// Avoid garbage collection
+(global as any).win = win;
+`;
+
+<Code code={qTreeWidgetExample} title='example_treeWidget.ts' lang='ts' />
+
+Learn more about `QTreeWidget` in: https://doc.qt.io/qt-6/qtreewidget.html

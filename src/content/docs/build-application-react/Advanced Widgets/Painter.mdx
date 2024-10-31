@@ -1,0 +1,34 @@
+---
+title: Painter
+description: How to use Painter in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Painter** is a widget that provides a painter that you can use in your application.
+
+## Example
+
+export const qPainterExample = `
+import { Window, View } from '@vixen-js/core-react';
+import { WidgetEventTypes, QPainter } from '@vixen-js/core';
+
+export const App = () => {
+
+  const paint = () => {
+    const painter = new QPainter();
+    painter.drawText(40, 40, "Hello Painter");
+    painter.end();
+  }
+
+  return (
+    <Window 
+      size={{ width: 300, height: 300 }} 
+      on={{ [WidgetEventTypes.Paint]: paint}} />
+  )
+}
+`;
+
+<Code code={qPainterExample} title='example_painter.ts' lang='ts' />
+
+Learn more about `QPainter` in: https://doc.qt.io/qt-6/qpainter.html

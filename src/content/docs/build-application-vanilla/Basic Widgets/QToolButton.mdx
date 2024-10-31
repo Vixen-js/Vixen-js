@@ -1,0 +1,21 @@
+---
+title: QToolButton
+description: How to use QToolButton in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QToolButton** is a widget that provides a special button that you can use in your application with a quick access to commands or options, usually used in toolbars.
+
+## Example
+
+export const qToolButtonExample = `
+import { QToolButton } from '@vixen-js/core';
+
+const button = new QToolButton();
+button.setText("Your button");
+`;
+
+<Code code={qToolButtonExample} title='example_toolButton.ts' lang='ts' />
+
+Learn more about `QToolButton` in: https://doc.qt.io/qt-6/qtoolbutton.html

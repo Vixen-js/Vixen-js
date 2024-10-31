@@ -1,0 +1,27 @@
+---
+title: QAction
+description: How to use QAction in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QAction** is a widget that provides an action that you can use in your menus.
+
+## Example
+
+export const qActionExample = `
+import { QAction, QMenu } from '@vixen-js/core';
+
+const menu = new QMenu();
+const action = new QAction();
+
+action.setText("Your action");
+action.addEventListener("triggered", () => {
+    console.log("Action triggered");
+});
+menu.addMenu(action);
+`;
+
+<Code code={qActionExample} title='example_action.ts' lang='ts' />
+
+Learn more about `QAction` in: https://doc.qt.io/qt-6/qaction.html

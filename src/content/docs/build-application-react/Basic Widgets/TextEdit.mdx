@@ -1,0 +1,24 @@
+---
+title: TextEdit
+description: How to use TextEdit in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **TextEdit** is a widget that provides a text field that you can use in your application.
+
+## Example
+
+export const textEditExample = `
+import { TextEdit } from '@vixen-js/core-react';
+
+export function TextEditExample() {
+    return (
+        <TextEdit />
+    ) 
+}
+`;
+
+<Code code={textEditExample} title='example_textEdit.tsx' lang='tsx' />
+
+Learn more about [`TextEdit`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/QTextEdit)

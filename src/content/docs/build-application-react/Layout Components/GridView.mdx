@@ -1,0 +1,33 @@
+---
+title: GridView
+description: How to use GridView in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **GridView** is a layout manager that organizes widgets in a __grid__ layout.
+
+## Example
+
+export const gridLayoutExample = `
+import { GridView, GridRow, GridColumn, Text } from '@vixen-js/core-react';
+
+export function gridLayoutExample() {
+    return (
+        <GridView>
+            <GridRow>
+                <GridColumn><Text>Hello World</Text></GridColumn>
+                <GridColumn><Text>Hello World</Text></GridColumn>
+            </GridRow>
+            <GridRow>
+                <GridColumn ><Text>Hello World</Text></GridColumn>
+                <GridColumn ><Text>Hello World</Text></GridColumn>
+            </GridRow>
+        </GridView>
+    )
+}
+`;
+
+<Code code={gridLayoutExample} title='example_grid.tsx' lang='tsx' />
+
+Learn More about `GridView` in: https://doc.qt.io/qt-6/gridView.html

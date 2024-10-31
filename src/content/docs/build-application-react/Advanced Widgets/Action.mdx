@@ -1,0 +1,26 @@
+---
+title: Action
+description: How to use Action in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Action** is a widget that provides an action that you can use in your menus.
+
+## Example
+
+export const qActionExample = `
+import { Action, Menu } from '@vixen-js/core-react';
+
+export const Menu = () => {
+    return (
+        <Menu title="Main Menu">
+            <Action text="Your action" />
+        </Menu>
+    )
+}
+`;
+
+<Code code={qActionExample} title='MenuWithActions.tsx' lang='tsx' />
+
+Learn more about [`Action`](https://vixen-js.github.io/docs/build-application-vanilla/Advanced-Widgets/QAction)

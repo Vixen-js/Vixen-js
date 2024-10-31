@@ -1,0 +1,23 @@
+---
+title: QApplication
+description: How to use QApplication in your application
+---
+import { Code } from '@astrojs/starlight/components';
+
+> The **QApplication** class manages the GUI application's control flow and main settings.
+
+You will never create an instance of it manually. The system runtime does it for you on app start.
+You can access the initialized `QApplication` though if needed.
+
+## Example
+
+export const qApplicationExample = `
+import { QApplication } from '@vixen-js/core';
+
+const appInstance = QApplication.instance();
+appInstance.quit();
+`;
+
+<Code code={qApplicationExample} title='example_application.ts' lang='ts' />
+
+More information about `QApplication` in: https://doc.qt.io/qt-6/qapplication.html

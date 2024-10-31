@@ -1,0 +1,35 @@
+---
+title: QPainter
+description: How to use QPainter in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QPainter** is a widget that provides a painter that you can use in your application.
+
+## Example
+
+export const qPainterExample = `
+import { QPainter, QWindow, QWidget, WidgetEventTypes } from '@vixen-js/core';
+
+const window = new QWindow();
+const center = new QWidget();
+const layout new FlexLayout();
+
+center.setLayout(layout);
+window.resize(300, 300);
+
+window.addEventListener(WidgetEventTypes.Paint, (event) => {
+  const painter = new QPainter();
+  painter.drawText(40, 40, "Hello Painter");
+  painter.end();
+})
+
+window.show();
+
+(global as any).win = window; // Avoid garbage collection
+`;
+
+<Code code={qPainterExample} title='example_painter.ts' lang='ts' />
+
+Learn more about `QPainter` in: https://doc.qt.io/qt-6/qpainter.html

@@ -1,0 +1,29 @@
+---
+title: QDateTimeEdit
+description: How to use QDateTimeEdit in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QDateTimeEdit** Creates and controls a widget for editing date and time values with spinbox layout.
+
+## Example
+
+export const qDateTimeEditExample = `
+import { QDateTimeEdit } from '@vixen-js/core';
+
+const dateTimeEdit = new QDateTimeEdit();
+
+let date = new QDate();
+date.setDate(2024, 1, 1);
+
+let time = new QTime();
+time.setHMS(16, 30, 0);
+
+dateTimeEdit.setDate(date);
+dateTimeEdit.setTime(time);
+`;
+
+<Code code={qDateTimeEditExample} title='example_dateTimeEdit.ts' lang='ts' />
+
+Learn more about `QDateTimeEdit` in: https://doc.qt.io/qt-6/qdatetimeedit.html

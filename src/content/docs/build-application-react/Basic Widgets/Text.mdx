@@ -1,0 +1,25 @@
+---
+title: Text
+description: How to use Text in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Text** is a widget that provides a text label that you can use in your application.
+
+## Example
+
+export const textExample = `
+import { Text } from '@vixen-js/core-react';
+
+export function TextExample() {
+    return (
+        <Text>Hello World</Text>
+    );
+}
+
+`;
+
+<Code code={textExample} title='example_text.tsx' lang='tsx' />
+
+Learn more about [`Text`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/QLabel)

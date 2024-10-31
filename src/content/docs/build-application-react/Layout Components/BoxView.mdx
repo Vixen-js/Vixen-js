@@ -1,0 +1,27 @@
+---
+title: BoxView
+description: Use Box View to organize your screens.
+---
+import { Code } from '@astrojs/starlight/components';
+
+> **BoxView** is a layout manager that organizes widgets in a __horizontal__ or __vertical__ layout.
+
+## Example
+
+export const boxLayoutExample = `
+import { BoxView, Text } from '@vixen-js/core-react';
+import { Direction } from '@vixen-js/core';
+
+export function BoxLayoutExample() {
+    return (
+        <BoxView direction={Direction.TopToBottom}>
+            <Text>Hello World</Text>
+        </BoxView>
+    )
+}
+`;
+
+<Code code={boxLayoutExample} title='example_box.tsx' lang='tsx'  />
+
+Learn More about [`BoxView`](https://vixen-js.github.io/docs/build-application-vanilla/Layout-Components/QBoxLayout)
+

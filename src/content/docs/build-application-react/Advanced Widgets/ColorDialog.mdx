@@ -1,0 +1,25 @@
+---
+title: ColorDialog
+description: How to use ColorDialog in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **ColorDialog** is a widget that provides a color dialog that you can use in your application.
+
+## Example
+
+export const ColorDialogExample = `
+import { ColorDialog } from '@vixen-js/core-react';
+import { QColor } from '@vixen-js/core';
+
+export function ColorChooser(){
+    return (
+        <ColorDialog currentColor={new QColor("black")} />
+    );
+}
+`
+
+<Code code={ColorDialogExample} title='example_colorDialog.tsx' lang='tsx' />
+
+Learn more about [`ColorDialog`](https://vixen-js.github.io/docs/build-application-vanilla/Advanced-Widgets/QColorDialog)

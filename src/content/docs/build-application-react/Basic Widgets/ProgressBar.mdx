@@ -1,0 +1,24 @@
+---
+title: ProgressBar
+description: How to use ProgressBar in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **ProgressBar** is a widget that provides a progress bar that you can use in your application.
+
+## Example
+
+export const progressBarExample = `
+import { ProgressBar } from '@vixen-js/core-react';
+
+export function ProgressBarExample() {
+    return (
+        <ProgressBar value={50} min={0} max={100} />
+    );
+}
+`;
+
+<Code code={progressBarExample} title='example_progressBar.tsx' lang='tsx' />
+
+Learn more about [`ProgressBar`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/QProgressBar)

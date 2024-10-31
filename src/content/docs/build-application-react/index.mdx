@@ -1,0 +1,90 @@
+---
+title: Learn the basics
+description: How to use the Vixen UI React to build a simple application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> How to use the Vixen UI to build a simple application
+
+On this section you will learn how to use the Vixen UI to build a simple application using the `react` template.
+
+Vixen UI enables you to create desktop applications using `React.js` With Typescript and CSS like styling. You could see it as a lightweight and high performance desktop UI for Nodejs.
+
+Vixen UI is also an efficient Javascript binding to the `Qt` Cpp library. Qt is one of the most mature and efficient UI library for building desktop applications. This enables Vixen to be extremely
+efficiency memory and CPU compared with other popular UI Javascript Frameworks. The intention of this Sections is to show you how yo use the most common Vixen UI components to build a Hello world applcation.
+
+## Choosing the right Code Editor
+
+We might suggest you to use [VS Code](https://code.visualstudio.com/) as a main code editor for Vixen UI. if you like to have another alternatives, you can use [Sublime Text](https://www.sublimetext.com/) as a code editor.
+
+## Hello World
+
+To setup the basic project, run the following command:
+
+```bash
+pnpm create @vixen-js/vixen my-project --template react
+```
+
+After the output, you can move into the `my-project` folder and run `pnpm i` to install the dependencies.
+```bash
+cd my-project
+pnpm i
+```
+
+## Development
+
+To start your application, runf the following command:
+```bash
+pnpm dev
+```
+
+When the command finish, you can see something similar to this:
+
+![Hello World](../../../assets/images/hello-world.png)
+
+Now you can open the `App.tsx` file and check the source code.
+
+export const mainTSContent = `
+import { Window, View, Text, Image } from "@vixen-js/core-react";
+import styles from "./assets/styles/styles.css?raw";
+import { QIcon } from "@vixen-js/core";
+
+const App = () => {
+  return (
+    <Window
+      styleSheet={styles}
+      size={{ width: 800, height: 600 }}
+      windowTitle="Vixen UI React"
+      windowIcon={
+        new QIcon(
+          "https://raw.githubusercontent.com/Vixen-js/template-vanilla-ts/refs/heads/main/src/assets/images/Logo.png"
+        )
+      }
+    >
+      <View id="root">
+        <Text id="label1">Hello Vixen React!</Text>
+        <Image
+          id="image"
+          scaledContents={true}
+          size={{ width: 100, height: 100 }}
+          src="https://raw.githubusercontent.com/Vixen-js/template-vanilla-ts/refs/heads/main/src/assets/images/Logo.png"
+        />
+        <Text id="label2">
+          Open yout App.tsx file and modify to see the changes
+        </Text>
+      </View>
+    </Window>
+  );
+};
+
+export default App;`;
+
+<Code  code={mainTSContent} lang='tsx' title="App.tsx" />
+
+Let's comment some code in the `main.tsx` file:
+
+- __MainWindow__ is the root widget of all your application, it's the main Window.
+- If you want to add Some texts, you should import __Text__ from `@vixen-js/core-react`
+- If you want to use images, you should import __Image__ component from `@vixen-js/core-react` to display it in the screen.
+- If you want to use __CSS styles__, you should import your css file as raw and set it in the __Window__ `stylesheet` property for Global Styles.

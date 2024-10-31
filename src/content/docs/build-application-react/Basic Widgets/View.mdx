@@ -1,0 +1,28 @@
+---
+title: View
+description: How to use View in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **View** is the base class for all widgets in Qt.
+
+You can use this class to create your own widgets, is similar to the HTML `<div>` in the web world.
+
+## Example
+
+export const viewExample = `
+import { View, Text } from '@vixen-js/core-react';
+
+export function ViewExample() {
+    return (
+        <View>
+            <Text>Hello World</Text>
+        </View>
+    )
+}
+`;
+
+<Code code={viewExample} title='example_view.tsx' lang='tsx' />
+
+Learn more about [`View`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/QWidget)

@@ -1,0 +1,24 @@
+---
+title: QProgressDialog
+description: How to use QProgressDialog in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QProgressDialog** is a widget that provides a progress dialog that you can use in your application.
+
+## Example
+
+export const qProgressDialogExample = `
+import { QProgressDialog } from '@vixen-js/core';
+
+const progress = new QProgressDialog();
+progress.setLabelText("Downloading...");
+progress.setCancelButtonText("Cancel");
+progress.setRange(0, 100);
+progress.setValue(0);
+`;
+
+<Code code={qProgressDialogExample} title='example_progressDialog.ts' lang='ts' />
+
+Learn more about `QProgressDialog` in: https://doc.qt.io/qt-6/qprogressdialog.html

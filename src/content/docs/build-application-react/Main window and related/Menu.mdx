@@ -1,0 +1,24 @@
+---
+title: Menu
+description: How to use Menu to add menus in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Menu** is a widget that provides a menu widget that you can use in **menu bars**, **context menus**, and other **popup menus**.
+
+## Example
+
+export const menuExample = `
+import { Menu } from '@vixen-js/core-react';
+
+export function MenuExample() {
+    return (
+        <Menu title="Main Menu" />
+    );
+}
+`;
+
+<Code code={menuExample} title='example_menu.tsx' lang='tsx' />
+
+Learn more about [`Menu`](https://vixen-js.github.io/docs/build-application-vanilla/main-window-and-related/QMenu)

@@ -1,0 +1,30 @@
+---
+title: QComboBox
+description: How to use QComboBox in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QComboBox** is a widget that provides a selectable drop down menu
+
+## Example
+
+export const qComboBoxExample = `
+import { QComboBox } from '@vixen-js/core';
+
+const combobox = new QComboBox();
+combobox.addItems(["Item 1", "Item 2", "Item 3"]);
+
+combobox.addEventListener("currentTextChanged", (text) => {
+    console.log(\`Text Changed to: \${text}\`);
+});
+
+comboboxaddEventListener("currentIndexChanged", (idx) => {
+    console.log(\`Index Changed to: \${idx}\`);
+});
+
+`;
+
+<Code code={qComboBoxExample} title='example_combobox.ts' lang='ts' />
+
+Learn more about `QComboBox` in: https://doc.qt.io/qt-6/qcombobox.html

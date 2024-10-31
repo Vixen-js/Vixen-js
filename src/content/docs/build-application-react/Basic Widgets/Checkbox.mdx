@@ -1,0 +1,24 @@
+---
+title: Checkbox
+description: How to use Checkbox in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Checkbox** is a widget that provides a checkbox widget with a text label that you can use in your application.
+
+## Example
+
+export const qCheckboxExample = `
+import { Checkbox } from '@vixen-js/core-react';
+
+export function CheckboxExample() {
+    return (
+        <Checkbox text="I am a checkbox" />
+    );
+}
+`;
+
+<Code code={qCheckboxExample} title='example_checkbox.tsx' lang='tsx' />
+
+Learn more about [`Checkbox`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/QCheckbox)

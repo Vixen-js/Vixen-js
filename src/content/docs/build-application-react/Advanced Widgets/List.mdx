@@ -1,0 +1,27 @@
+---
+title: List
+description: How to use List in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **ListView** is a widget that provides a list view that you can use in your application.
+
+## Example
+
+export const ListExample = `
+import { List } from '@vixen-js/core-react';
+
+export function ListViewExample() {
+    return (
+        <List>
+            <ListItem title="First Item" />
+            <ListItem title="Second Item" />
+        </List>
+    );
+}
+`;
+
+<Code code={ListExample} title='example_list.tsx' lang='tsx' />
+
+Learn more about [`ListView`](https://vixen-js.github.io/docs/build-application-vanilla/Advanced-Widgets/QListView)

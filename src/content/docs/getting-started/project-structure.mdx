@@ -5,7 +5,7 @@ description: This document outlines the organization and layout of the Vixen UI 
 
 import { FileTree } from '@astrojs/starlight/components'
 
-> Vixen UI use `Vite` as its build tool, so if you are familiar with Vite, you can see some similar project structure.
+> Vixen UI use `Esbuild` as its build tool, so if you are familiar with Esbuild, you can see some similar project structure.
 
 The project is organized into the following `top-level` directories and files:
 
@@ -13,13 +13,14 @@ The project is organized into the following `top-level` directories and files:
 - src 
     - asssets
         - images
+            - AppIcon.png Required to build the application, the image should have 1024x1024 pixels in size
             - ... Place here all the image resources
         - styles
             - ... Place here all the CSS style resources
     - main.ts Application Entrypoint
-    - vite-env.d.ts
+    - vixen-env.d.ts
 - eslint.config.js
 - package.json
 - tsconfig.json
-- vite.config.ts
+- build.mjs Esbuild build script
 </FileTree>

@@ -8,6 +8,7 @@ export default defineConfig({
     starlight({
       title: "Vixen UI",
       description: "Vixen UI is a framework for building user interfaces.",
+      customCss: ["./src/assets/theme.css"],
       social: {
         github: "https://github.com/Vixen-js",
       },
@@ -40,6 +41,10 @@ export default defineConfig({
             directory: "build-application-react",
             collapsed: true,
           },
+        },
+        {
+          label: "🚧 Development",
+          autogenerate: { directory: "development" },
         },
       ],
     }),

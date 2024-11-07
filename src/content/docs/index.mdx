@@ -8,21 +8,23 @@ hero:
     file: ../../assets/Vixen.svg
   actions:
     - text: Get started
-      link: getting-started/installation/
+      link: docs/getting-started/installation/
       icon: right-arrow
     - text: Read the docs
-      link: build-application-vanilla/
+      link: docs/build-application-vanilla/
       icon: external
       variant: minimal
 ---
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import pkg from '../../../package.json';
 
 ## Disclaimer
 -------
 #### 🚧 This project is under active development, so some API's may change in the future. Dot use it in a production environment. 🚧
 -------
 
-## Features
+## Features 
+Version v{pkg.version}
 
 <CardGrid stagger>
 	<Card title="Cross Platform" icon="starlight">

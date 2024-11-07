@@ -17,6 +17,8 @@ hero:
 ---
 import { Card, CardGrid } from '@astrojs/starlight/components';
 import pkg from '../../../package.json';
+import { Badge } from '@astrojs/starlight/components';
+
 
 ## Disclaimer
 -------
@@ -24,7 +26,7 @@ import pkg from '../../../package.json';
 -------
 
 ## Features 
-Version v{pkg.version}
+Version <Badge variant="tip" text={`v${pkg.version}`} />
 
 <CardGrid stagger>
 	<Card title="Cross Platform" icon="starlight">

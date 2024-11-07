@@ -47,7 +47,7 @@ stack.addWidget(page3);
 const combo = new QCombobox();
 combo.addItems(["Page 1", "Page 2", "Page 3"]);
 
-combo.addEventListener("currentIndexChanged", (idx) => {
+combo.addEventListener("onCurrentIndexChanged", (idx) => {
     stack.setCurrentIndex(idx);
 })
 
@@ -56,7 +56,7 @@ root.addWidget(combo);
 const currentIdx = new QLabel();
 currentIdx.setText(\`current Index: \${stack.currentIndex().toString()}\`);
 
-stack.addEventListener("currentChanged", (idx) => {
+stack.addEventListener("onCurrentChanged", (idx) => {
     currentIdx.setText(\`current Index: \${idx}\`);
 })
 

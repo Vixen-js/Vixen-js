@@ -15,7 +15,7 @@ import { QMenuBar, QMainWindow, QAction } from '@vixen-js/core';
 const win = new QMainWindow();
 
 const btn = new QAction(new QIcon("icon.png"), "Your button");
-btn.addEventListener("triggered", () => {
+btn.addEventListener("onTrigger", () => {
     console.log("Button clicked");
 })
 

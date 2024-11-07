@@ -15,11 +15,11 @@ import { QComboBox } from '@vixen-js/core';
 const combobox = new QComboBox();
 combobox.addItems(["Item 1", "Item 2", "Item 3"]);
 
-combobox.addEventListener("currentTextChanged", (text) => {
+combobox.addEventListener("onCurrentTextChanged", (text) => {
     console.log(\`Text Changed to: \${text}\`);
 });
 
-comboboxaddEventListener("currentIndexChanged", (idx) => {
+comboboxaddEventListener("onCurrentIndexChanged", (idx) => {
     console.log(\`Index Changed to: \${idx}\`);
 });
 

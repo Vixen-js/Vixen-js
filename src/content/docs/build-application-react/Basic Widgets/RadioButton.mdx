@@ -14,15 +14,13 @@ import { RadioButton } from '@vixen-js/core-react';
 
 export function RadioButtonExample() {
 
-    const radioEvents = {
-        toggled: (checked: boolean) => {
+    const onToggle = (checked: boolean) => {
           console.log("Radio button toggled value: ", checked)
-        }
     };
     return (
         <RadioButton 
           text="Your radio button"
-          on={radioEvents} />
+          onToggle={onToggle} />
     );
 }`;
 

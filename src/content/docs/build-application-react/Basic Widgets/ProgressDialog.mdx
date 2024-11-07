@@ -22,7 +22,7 @@ export function ProgressDialogExample() {
             maxValue={100}
             minValue={0}
             value={50} />
-          <Button on={{clicked: () => setIsOpen(!isOpen)}} text="Open/Close" />
+          <Button onClick={() => setIsOpen(!isOpen)} text="Open/Close" />
         </>
     );
 }

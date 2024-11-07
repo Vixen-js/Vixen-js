@@ -16,7 +16,7 @@ const menu = new QMenu();
 const action = new QAction();
 
 action.setText("Your action");
-action.addEventListener("triggered", () => {
+action.addEventListener("onTrigger", () => {
     console.log("Action triggered");
 });
 menu.addMenu(action);

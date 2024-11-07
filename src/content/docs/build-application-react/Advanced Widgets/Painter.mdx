@@ -11,7 +11,7 @@ import { Code } from '@astrojs/starlight/components';
 
 export const qPainterExample = `
 import { Window, View } from '@vixen-js/core-react';
-import { WidgetEventTypes, QPainter } from '@vixen-js/core';
+import { QPainter } from '@vixen-js/core';
 
 export const App = () => {
 
@@ -24,7 +24,7 @@ export const App = () => {
   return (
     <Window 
       size={{ width: 300, height: 300 }} 
-      on={{ [WidgetEventTypes.Paint]: paint}} />
+      onPaint={paint} />
   )
 }
 `;

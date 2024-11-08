@@ -1,0 +1,33 @@
+---
+title: ProgressDialog
+description: Cómo usar ProgressDialog en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **ProgressDialog** es un widget que proporciona un ProgressDialog que puedes utilizar en tu aplicación.
+
+## Ejemplo
+
+export const qProgressDialogExample = `
+import { ProgressDialog } from '@vixen-js/core-react';
+import { useState } from "react";
+
+export function ProgressDialogExample() {
+    const [isOpen, setIsOpen] = useState(true);
+    return (
+        <>
+          <ProgressDialog 
+            open={isOpen}
+            maxValue={100}
+            minValue={0}
+            value={50} />
+          <Button onClick={() => setIsOpen(!isOpen)} text="Open/Close" />
+        </>
+    );
+}
+`;
+
+<Code code={qProgressDialogExample} title='example_progressDialog.ts' lang='ts' />
+
+Aprende más sobre [`ProgressDialog`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/QProgressDialog).

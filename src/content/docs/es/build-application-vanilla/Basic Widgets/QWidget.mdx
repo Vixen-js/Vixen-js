@@ -1,0 +1,24 @@
+---
+title: QWidget
+description: Cómo usar QWidget en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QWidget** es el widget base de todo widget de Qt.
+
+Puedes usar QWidget para crear tus propios widgets.
+
+## Ejemplo
+
+export const qWidgetExample = `
+import { QWidget, FlexLayout } from '@vixen-js/core';
+
+const widget = new QWidget();
+widget.setObjectName("container");
+widget.setLayout(new FlexLayout());
+`;
+
+<Code code={qWidgetExample} title='example_widget.ts' lang='ts' />
+
+Aprende mas sobre `QWidget` en: https://doc.qt.io/qt-6/qwidget.html

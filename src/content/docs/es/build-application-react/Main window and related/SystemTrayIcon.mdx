@@ -1,0 +1,30 @@
+---
+title: SystemTrayIcon
+description: Cómo usar SystemTrayIcon en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **SystemTrayIcon** es un widget que proporciona un icono de sistema que puedes utilizar en tu aplicación.
+
+## Ejemplo
+
+export const qSystemTrayIconExample = `
+import { SystemTrayIcon } from '@vixen-js/core-react';
+import { QIcon } from '@vixen-js/core';
+import { resolve } from 'path';
+
+const icon = new QIcon(
+  resolve('./assets/icon.png')
+);
+
+export function SystemTrayIconExample() {
+    return (
+        <SystemTrayIcon icon={icon} visible={true} />
+    );
+}
+`;
+
+<Code code={qSystemTrayIconExample} title='example_systemTrayIcon.tsx' lang='tsx' />
+
+Aprende más sobre [`SystemTrayIcon`](https://vixen-js.github.io/docs/build-application-vanilla/main-window-and-related/QSystemTrayIcon).

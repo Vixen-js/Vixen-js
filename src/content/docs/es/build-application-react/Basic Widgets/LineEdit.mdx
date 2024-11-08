@@ -1,0 +1,31 @@
+---
+title: LineEdit
+description: Cómo usar el componente LineEdit en tu aplicación.
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **LineEdit** es un widget que proporciona un cuadro de texto editable que puedes usar en tu aplicación.
+
+## Ejemplo
+
+export const LineEditExample = `
+import { LineEdit } from '@vixen-js/core-react';
+
+export function LineEditExample() {
+
+    const handleTextChanged = (text: string) => {
+        console.log(text);
+    };
+
+    return (
+      <Window>
+        <LineEdit onTextChange={handleTextChanged} />
+      </Window>    
+    )
+}
+`;
+
+<Code code={LineEditExample} title='example_lineEdit.tsx' lang='tsx' />
+
+Aprende más sobre [`LineEdit`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/QLineEdit).

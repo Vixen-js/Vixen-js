@@ -1,0 +1,26 @@
+---
+title: Estructura del proyecto
+description: Este documento describe la organización y estructura de un proyecto de Vixen UI, incluyendo la estructura de directorios y archivos.
+---
+
+import { FileTree } from '@astrojs/starlight/components'
+
+> Vixen UI usa `Esbuild` como herramienta de compilación, si estas familia con Esbuild, puedes ver una similar estructura de proyecto.
+
+El proyecto está organizado en los siguientes directorios y archivos:
+
+<FileTree>
+- src 
+    - asssets
+        - images
+            - AppIcon.png Requerido para compilar la aplicación, la imagen debe tener 1024x1024 pixeles de tamaño
+            - ... Coloca acá todos los recursos de imagen de tu aplicación
+        - styles
+            - ... Coloca acá todos los recursos de CSS de tu aplicación
+    - main.ts Punto de entrada de la aplicación
+    - vixen-env.d.ts
+- eslint.config.js
+- package.json
+- tsconfig.json
+- build.mjs Script de compilación de Esbuild
+</FileTree>

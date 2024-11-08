@@ -1,0 +1,28 @@
+---
+title: Instalación
+description: Guía de instalación para Vixen UI
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+export const outputCreate = "Creating project: test-project with default_template \nStarted git initialization \nInitialized empty Git repository in {PROJECT_DIR}/test-project/.git \nProject created successfully! \nNext steps:\n\t1. run 'cd test-project && pnpm i' to install dependencies\n\t2. Start development application running 'pnpm dev'"
+
+export const outputInstall = "pnpm create @vixen-js/vixen my-project #if you want to use the default_template\npnpm create @vixen-js/vixen my-project --template vanilla #if you want to use the vanilla-ts template\npnpm create @vixen-js/vixen my-project --template react #if you want to use the react template"
+
+Requerimientos de Sistema:
+- [Node 18.12.0](https://nodejs.org/en) o mayor
+- macOS, Windows (incluyendo WSL), o Linux
+
+### Instalación Automatica
+
+Recomendamos iniciar un nuevo proyecto de Vixen UI usando [`@vixen-js/create-vixen`](https://github.com/Vixen-js/create-vixen), que se encarga de todo por ti. sigue los pasos abajo para configurar un nuevo proyecto de Vixen UI:
+
+Crear la estructura del proyecto:
+
+<Code code={outputInstall} lang='bash' />
+Durante el proceso de instalación, podrás ver la siguiente salida:
+
+<Code code={outputCreate} lang='bash' />
+
+Despues de terminar la inicialización del proyecto, se creará una carpeta con el nombre de tu proyecto con todas las dependencias necesarias para comenzar a trabajar con Vixen UI.
+Si eres nuevo en Vixen UI, consulta la sección de [Tutoriales](/build-application-react).

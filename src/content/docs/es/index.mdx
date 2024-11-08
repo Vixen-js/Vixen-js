@@ -1,0 +1,51 @@
+---
+title: Bienvenido a Vixen UI
+description: El framework UI para crear aplicaciones de escritorio súper rápido y ligero para Node.js.
+template: splash
+hero:
+  tagline: Crea aplicaciones de escritorio extremadamente rápidas y ligeras con TypeScript y estilos similares a CSS.
+  image:
+    file: ../../../assets/Vixen.svg
+  actions:
+    - text: Comienza aquí
+      link: getting-started/installation/
+      icon: right-arrow
+    - text: Lee la documentación
+      link: build-application-vanilla/
+      icon: external
+      variant: minimal
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import pkg from '../../../../package.json';
+import { Badge } from '@astrojs/starlight/components';
+
+
+## Descargo de Responsabilidad
+-------
+#### 🚧 Este proyecto está en desarrollo activo, por lo que algunas API pueden cambiar en el futuro. No lo uses en un entorno de producción. 🚧
+-------
+
+## Características 
+Versión <Badge variant="tip" text={`v${pkg.version}`} />
+
+<CardGrid stagger>
+	<Card title="Multi Plataforma" icon="starlight">
+		Vixe UI Funciona en Windows, Linux y Mac
+	</Card>
+	<Card title="Ultra eficiente" icon="seti:cpp">
+		Vixen UI está basado en la biblioteca Qt6 de C++, por lo que puedes crear interfaces de usuario de escritorio extremadamente rentables.
+		Actualmente, la CPU consume `0%` en estado inactivo y el uso de memoria para un programa básico es inferior a `20 MB`.
+	</Card>
+	<Card title="Estila tu app con CSS" icon="seti:css">
+		Usa CSS para diseñar tu interfaz de usuario con soporte completo para el diseño de Flexbox.
+	</Card>
+	<Card title="Construido en Typescript" icon="seti:typescript">
+		Este proyecto fue creado en TypeScript, pero si prefieres trabajar con JS, también puedes usarlo.
+	</Card>
+	<Card title="Vixen CLI" icon="seti:config">
+		Configura tu entorno de desarrollo fácilmente con nuestra herramienta [CLI](https://github.com/vixen-js/create-vixen?tab=readme-ov-file#create-vixen-cli).
+	</Card>
+	<Card title="Amiagable para desarrolladores" icon="seti:react">
+		Si te gusta [React.js](https://github.com/vixen-js/template-react) puedes utilizarlo para desarrollar aplicaciones de escritorio Vixen.
+	</Card>
+</CardGrid>

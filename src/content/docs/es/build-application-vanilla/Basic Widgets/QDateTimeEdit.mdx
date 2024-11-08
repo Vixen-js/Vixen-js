@@ -1,0 +1,29 @@
+---
+title: QDateTimeEdit
+description: Cómo usar QDateTimeEdit en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QDateTimeEdit** Crea y controla un QDateTimeEdit que puedes utilizar en tu aplicación.
+
+## Ejemplo
+
+export const qDateTimeEditExample = `
+import { QDateTimeEdit } from '@vixen-js/core';
+
+const dateTimeEdit = new QDateTimeEdit();
+
+let date = new QDate();
+date.setDate(2024, 1, 1);
+
+let time = new QTime();
+time.setHMS(16, 30, 0);
+
+dateTimeEdit.setDate(date);
+dateTimeEdit.setTime(time);
+`;
+
+<Code code={qDateTimeEditExample} title='example_dateTimeEdit.ts' lang='ts' />
+
+Aprende mas sobre `QDateTimeEdit` en: https://doc.qt.io/qt-6/qdatetimeedit.html

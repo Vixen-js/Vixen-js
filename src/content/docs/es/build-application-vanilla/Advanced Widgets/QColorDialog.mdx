@@ -1,0 +1,25 @@
+---
+title: QColorDialog
+description: Como usar QColorDialog en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QColorDialog** es un widget que proporciona un ColorDialog que puedes utilizar en tu aplicación.
+
+## Ejemplo
+
+export const qColorDialogExample = `
+import { QColorDialog } from '@vixen-js/core';
+
+const colorDialog = new QColorDialog();
+colorDialog.setCurrentColor(new QColor("black"))
+colorDialog.exec();
+
+const color = colorDialog.currentColor();
+console.info(color.red(), color.green(), color.blue());
+`
+
+<Code code={qColorDialogExample} title='example_colorDialog.ts' lang='ts' />
+
+Aprende mas sobre `QColorDialog` en: https://doc.qt.io/qt-6/qcolordialog.html

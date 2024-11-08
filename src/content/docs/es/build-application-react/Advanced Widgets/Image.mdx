@@ -1,0 +1,24 @@
+---
+title: Image
+description: Cómo usar el componente Image en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Image** es un componente personalizado que envuelve una QLabel y QPixmap para mostrar una imagen en tu aplicación.
+
+## Ejemplo
+
+export const ImageExample = `
+import { Image } from '@vixen-js/core-react';
+
+export function ImageExample() {
+    return (
+        <Image
+            src="./assets/images/hello-world.png"
+        />
+    );
+}
+`;
+
+<Code code={ImageExample} title='example_Image.tsx' lang='tsx' />

@@ -1,0 +1,36 @@
+---
+title: QSplitter
+description: Cómo usar QSplitter en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QSplitter** es un widget que proporciona un QSplitter que puedes utilizar en tu aplicación.
+
+## Ejemplo
+
+export const qSplitterExample = `
+import { QSplitter, QWidget, QBoxLayout, Direction, Orientation } from '@vixen-js/core';
+
+const root = new QWidget();
+const layout = new QBoxLayout(Direction.LeftToRight);
+layout.setSpacing(0);
+root.setLayout(layout);
+root.setObjectName("root");
+
+const hSplitter = new QSplitter();
+hSplitter.setObjectName("hSplitter");
+hSplitter.setOrientation(Orientation.Horizontal);
+
+const left = new QWidget();
+left.setinlineStyle("background-color: green;");
+const right = new QWidget();
+right.setinlineStyle("background-color: purple;");
+root.layout!.addWidget(hSplitter);
+hSplitter.addWidget(left);
+hSplitter.addWidget(right);
+`;
+
+<Code code={qSplitterExample} title='example_splitter.ts' lang='ts' />
+
+Aprende mas sobre `QSplitter` en: https://doc.qt.io/qt-6/qsplitter.html

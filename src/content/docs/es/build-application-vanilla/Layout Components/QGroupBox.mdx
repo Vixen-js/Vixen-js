@@ -1,0 +1,44 @@
+---
+title: QGroupBox
+description: How to use QGroupBox in your application
+---
+import { Code } from '@astrojs/starlight/components';
+
+> **QGroupBox** es un widget que agrupa un conjunto de Radio Buttons.
+
+## Ejemplo
+
+export const qGroupBoxExample = `
+import { QGroupBox, FlexLayout, QRadioButton, QMainWindow } from '@vixen-js/core';
+
+const win = new QMainWindow();
+
+const radio1 = new QRadioButton();
+radio1.setText("Radio 1");
+radio1.setObjectName("radio1");
+
+const radio2 = new QRadioButton();
+radio2.setText("Radio 2");
+radio2.setObjectName("radio2");
+
+const radio3 = new QRadioButton();
+radio3.setText("Radio 3");
+radio3.setObjectName("radio3");
+
+const groupLayout = new FlexLayout();
+const groupBox = new QGroupBox();
+groupBox.setLayout(groupLayout);
+
+groupLayout.addWidget(radio1);
+groupLayout.addWidget(radio2);
+groupLayout.addWidget(radio3);
+
+win.setCentralWidget(groupBox);
+win.resize(500, 300);
+
+win.show();
+`;
+
+<Code code={qGroupBoxExample} title='example_groupbox.ts' lang='ts' />
+
+Aprende mas sobre `QGroupBox` en: https://doc.qt.io/qt-6/qgroupbox.html

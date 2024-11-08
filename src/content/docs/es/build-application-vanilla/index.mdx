@@ -1,0 +1,110 @@
+---
+title: Aprende lo básico
+description: Cómo usar Vixen UI para crear una aplicación simple
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> Cómo usar la interfaz de usuario Vixen para crear una aplicación simple
+
+En esta sección aprenderás qué usar la interfaz de usuario Vixen para construir una aplicación simple utilizando la plantilla `vanilla`.
+
+Vixen UI te permite crear aplicaciones de escritorio utilizando Typescript y estilos similares a CSS. Se podría ver como una interfaz de usuario ligera y de alto rendimiento para Node.js.
+
+Vixen UI es una eficiente vinculación de JavaScript a la biblioteca `Qt` en C++. Qt es una de las bibliotecas de interfaces de usuario másivas y eficientes para construir aplicaciones de escritorio.
+Esto permite que Vixen sea extremadamente eficiente en cuanto a memoria y CPU en comparación con otros frameworks populares de interfaces de usuario en JavaScript.
+La intención de esta sección es mostrarte cómo usar los componentes más comunes de Vixen UI para construir una aplicación "Hello World".
+
+## Elegir el editor de código adecuado
+
+Te sugerimos usar [VS Code](https://code.visualstudio.com/) como editor de código principal para Vixen UI.
+Si prefieres otras alternativas, puedes usar [Sublime Text](https://www.sublimetext.com/) como editor de código.
+
+## Hola Mundo
+
+Para configurar el proyecto básico, ejecuta el siguiente comando:
+
+```bash
+pnpm create @vixen-js/vixen my-project --template vanilla
+```
+
+Al terminar la inicialización, puedes moverte a la carpeta `my-project` y ejecutar `pnpm i` para instalar las dependencias.
+
+```bash
+cd my-project
+pnpm i
+```
+
+## Desarrollo
+
+Para iniciar el proyecto de Vixen UI debes correr el comando:
+
+```bash
+pnpm dev
+```
+
+Cuando termine el comando, podrás ver algo similar a esto:
+
+![Hola Mundo](../../../../assets/images/hello-world.png)
+
+Ahora puedes abrir el archivo `main.ts` y revisar el código fuente.
+
+export const mainTSContent = `import {
+  QMainWindow,
+  QWidget,
+  QLabel,
+  FlexLayout,
+  QPixmap,
+  AlignmentFlag,
+  QIcon,
+} from "@vixen-js/core";
+import styles from "./styles/styles.css?raw";
+import path from "path";
+
+const images = path.resolve(__dirname, "./images");
+
+const win = new QMainWindow();
+win.setWindowTitle("Vixen UI Template");
+win.setFixedWidth(800);
+win.setFixedHeight(600);
+win.setWindowIcon(new QIcon(\`\${images}/typescript.svg\`));
+
+const root = new QWidget();
+const flex = new FlexLayout();
+root.setLayout(flex);
+root.setObjectName("root");
+
+const label = new QLabel();
+label.setText("Hello, Vixen!");
+label.setObjectName("label1");
+
+const labelImage = new QLabel();
+labelImage.setObjectName("image");
+labelImage.setPixmap(new QPixmap(\`\${images}/Logo.png\`).scaled(100, 100));
+labelImage.setAlignment(AlignmentFlag.AlignCenter);
+labelImage.setFixedSize(100, 100);
+
+const label2 = new QLabel();
+label2.setObjectName("label2");
+label2.setText("Open your main.ts and write some code!");
+
+flex.addWidget(label);
+flex.addWidget(labelImage);
+flex.addWidget(label2);
+
+win.setCentralWidget(root);
+win.setStyleSheet(String(styles));
+win.show();
+
+globalThis.win = win;`;
+
+<Code  code={mainTSContent} lang='ts' title="main.ts" />
+
+Comentemos algunas partes del código en el archivo `main.ts`:
+
+- __QMainWindow__ es la raíz de todos tus aplicaciones, es la ventana principal.
+- Si deseas agregar texto, debes importar __QLabel__ desde `@vixen-js/core`.
+- Si deseas usar imágenes, debes importar el componente __QPixmap__ desde `@vixen-js/core` para mostrarlo en la pantalla.
+- Si quieres usar __estilos CSS__, debes importar tu archivo CSS como raw y configurarlo en la propiedad `stylesheet` de __Window__ para los estilos globales.
+
+Si quieres conocer mas acerca de los componentes de Vixen UI, puedes ver la referencia de [Componentes de Qt](https://doc.qt.io/qt-6/widget-classes.html).

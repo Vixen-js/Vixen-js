@@ -1,0 +1,71 @@
+---
+title: FlexLayout
+description: Cómo usar FlexLayout en tu aplicación
+---
+import { Code } from '@astrojs/starlight/components';
+
+> **FlexLayout** es un componente personalizado que ayuda a organizar todos los widgets usando flex.
+
+Un `FlexLayout` se puede usar para organizar todos los widgets en una pantalla.
+
+### Ejemplo
+
+export const flexExample = `
+import { FlexLayout, QWidget, QLabel } from '@vixen-js/core';
+
+const view = new QWidget();
+const flex = new FlexLayout();
+flex.setObjectName("flex_layout");
+view.setLayout(flex);
+
+const title = new QLabel();
+title.setText("Hola Mundo");
+
+const subtitle = new QLabel();
+subtitle.setText("Este es un Subtítulo");
+
+flex.addWidget(title);
+flex.addWidget(subtitle);
+`;
+
+<Code code={flexExample} title='flex.ts' lang='ts' />
+
+En este ejemplo se muestra cómo `FlexLayout` se puede usar para organizar todos los widgets. Puedes estilizar este contenedor flex usando el nombre de objeto.
+
+export const cssStyleExample = `
+#flex_layout {
+    flex-direction: column;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+`;
+
+<Code code={cssStyleExample} title='flex.css' lang='css' />
+
+A continuación se muestra un ejemplo de cómo puedes usar CSS para personalizar el contenedor `FlexLayout`.
+
+export const flexWithCssExample = `
+import { FlexLayout, QWidget, QLabel } from '@vixen-js/core';
+import styles from './flex.css?raw'; // New
+
+const view = new QWidget();
+const flex = new FlexLayout();
+flex.setObjectName("flex_layout");
+view.setLayout(flex);
+
+const title = new QLabel();
+title.setText("Hello World");
+
+const subtitle = new QLabel();
+subtitle.setText("This is a subtitle");
+
+flex.addWidget(title);
+flex.addWidget(subtitle);
+view.setStyleSheet(String(styles)); // New
+`;
+
+export const highlights = ["view.setStyleSheet(String(styles));", "import styles from './flex.css?raw';"];
+
+<Code code={flexWithCssExample} title='flex.ts' lang='ts' mark={highlights} />
+

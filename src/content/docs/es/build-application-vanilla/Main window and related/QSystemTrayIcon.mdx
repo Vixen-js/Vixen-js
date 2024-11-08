@@ -1,0 +1,30 @@
+---
+title: QSystemTrayIcon
+description: Cómo usar QSystemTrayIcon en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QSystemTrayIcon** es un widget que proporciona un icono de sistema que puedes utilizar en tu aplicación.
+
+## Ejemplo
+
+export const qSystemTrayIconExample = `
+import { QSystemTrayIcon, QIcon } from '@vixen-js/core';
+import { resolve } from 'path';
+
+const icon = new QIcon(
+  resolve('./assets/icon.png')
+);
+const sysTray = new QSystemTrayIcon();
+
+sysTray.setIcon(icon);
+sysTray.show();
+
+// To prevent the icon from being garbage collected
+(global as any).tray = sysTray;
+`;
+
+<Code code={qSystemTrayIconExample} title='example_systemTrayIcon.ts' lang='ts' />
+
+Aprende más sobre `QSystemTrayIcon` en: https://doc.qt.io/qt-6/qsystemtrayicon.html

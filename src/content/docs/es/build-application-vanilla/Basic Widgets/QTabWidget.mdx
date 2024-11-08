@@ -1,0 +1,24 @@
+---
+title: QTabWidget
+description: Cómo usar QTabWidget en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QTabWidget** es un widget que proporciona un TabWidget que puedes utilizar en tu aplicación.
+
+## Ejemplo
+
+export const qTabWidgetExample = `
+import path from "path";
+import { QTabWidget, QCalendarWidget, QIcon } from '@vixen-js/core';
+
+const tabContainer = new QTabWidget();
+
+tabContainer.addTab(new QCalendarWidget(), new QIcon(path.join(__dirname, "../assets/images/t1.png")), "Tab 1");
+tabContainer.addTab(new QCalendarWidget(), new QIcon(path.join(__dirname, "../assets/images/t2.png")), "Tab 2");
+`;
+
+<Code code={qTabWidgetExample} title='example_tabWidget.ts' lang='ts' />
+
+Aprende mas sobre `QTabWidget` en: https://doc.qt.io/qt-6/qtabwidget.html

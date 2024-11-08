@@ -1,0 +1,35 @@
+---
+title: Table
+description: Cómo usar el componente Table en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Table** es un componente que proporciona una tabla que puedes utilizar en tu aplicación.
+
+## Ejemplo
+
+export const TableExample = `
+import { Table } from '@vixen-js/core-react';
+
+export function TableExample() {
+    return (
+       <Table
+            cellRange={{ row: 2, column: 3 }}
+            style="flex: 1;"
+            horizontalHeaderLabels={["Name", "Lastname", "Email"]}
+          >
+            <TableItem cellPosition={[0, 0]} text="Pepe" toolTip="The name of the person"/>
+            <TableItem cellPosition={[0, 1]} text="Perez"/>
+            <TableItem cellPosition={[0, 2]} text="pepe.perez@mail.com"/>
+            <TableItem cellPosition={[1, 0]} text="Dave" />
+            <TableItem cellPosition={[1, 1]} text="Velasquez"/>
+            <TableItem cellPosition={[1, 2]} text="dave.velasquez@mail.com"/>
+        </Table>
+    );
+}
+`;
+
+<Code code={TableExample} title='example_table.tsx' lang='tsx' />
+
+Aprende más sobre [`Table`](https://vixen-js.github.io/docs/build-application-vanilla/Advanced-Widgets/QTableWidget)

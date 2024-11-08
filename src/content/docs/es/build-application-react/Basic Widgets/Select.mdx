@@ -1,0 +1,29 @@
+---
+title: Select
+description: Cómo usar el componente Select en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Select** es un widget que proporciona un selectable drop down menu.
+
+## Ejemplo
+
+export const selectExample = `
+import { Select, SelectItem } from '@vixen-js/core-react';
+
+export function SelectExample() {
+    const Items: SelectItem[] = [
+        { text: "Item 1" },
+        { text: "Item 2" },
+        { text: "Item 3" }
+    ];
+    return (
+        <Select items={Items} />
+    );
+}
+`;
+
+<Code code={selectExample} title='example_select.tsx' lang='tsx' />
+
+Aprende más sobre [`Select`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/QComboBox).

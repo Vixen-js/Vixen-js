@@ -1,0 +1,34 @@
+---
+title: Painter
+description: Cómo usar el componente Painter en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Painter** es un widget que proporciona un Painter que puedes utilizar en tu aplicación.
+
+## Example
+
+export const qPainterExample = `
+import { Window, View } from '@vixen-js/core-react';
+import { QPainter } from '@vixen-js/core';
+
+export const App = () => {
+
+  const paint = () => {
+    const painter = new QPainter();
+    painter.drawText(40, 40, "Hola Painter");
+    painter.end();
+  }
+
+  return (
+    <Window 
+      size={{ width: 300, height: 300 }} 
+      onPaint={paint} />
+  )
+}
+`;
+
+<Code code={qPainterExample} title='example_painter.ts' lang='ts' />
+
+Aprende más sobre [`Painter`](https://vixen-js.github.io/docs/build-application-vanilla/Advanced-Widgets/QPainter)

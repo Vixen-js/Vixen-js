@@ -1,0 +1,29 @@
+---
+title: RadioButton
+description: Cómo usar el componente RadioButton en tu aplicación.
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **RadioButton** es un widget que proporciona un radio button con un texto que puedes usar en tu aplicación.
+
+## Ejemplo
+
+export const RadioButtonExample = `
+import { RadioButton } from '@vixen-js/core-react';
+
+export function RadioButtonExample() {
+
+    const onToggle = (checked: boolean) => {
+          console.log("Radio button toggled value: ", checked)
+    };
+    return (
+        <RadioButton 
+          text="Your radio button"
+          onToggle={onToggle} />
+    );
+}`;
+
+<Code code={RadioButtonExample} title='example_radio.tsx' lang='tsx' />
+
+Aprende más sobre [`RadioButton`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/QRadioButton).

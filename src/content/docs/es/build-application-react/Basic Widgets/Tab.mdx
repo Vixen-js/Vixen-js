@@ -1,0 +1,28 @@
+---
+title: Tab
+description: How to use Tab in your application
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Tab** es un widget que proporciona un componente Tab que puedes utilizar en tu aplicación.
+
+## Ejemplo
+
+export const tabExample = `
+import { Tab, TabItem } from '@vixen-js/core-react';
+
+export function TabExample() {
+    return (
+        <Tab>
+            <TabItem text="Tab 1" />
+            <TabItem text="Tab 2" />
+            <TabItem text="Tab 3" />
+        </Tab>
+    );
+}
+`;
+
+<Code code={tabExample} title='example_tabWidget.tsx' lang='tsx' />
+
+Aprende más sobre [`Tab`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/Tab).

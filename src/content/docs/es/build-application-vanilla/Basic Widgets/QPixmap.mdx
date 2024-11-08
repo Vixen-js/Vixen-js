@@ -1,0 +1,23 @@
+---
+title: QPixmap
+description: Cómo usar QPixmap en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QPixmap** es un widget que proporciona un QPixmap que puedes utilizar en tu aplicación.
+
+## Ejemplo
+
+export const qPixmapExample = `
+import { QPixmap, QLabel } from '@vixen-js/core';
+
+const imageUrl = "../../assets/images/hello-world.png";
+const pix = new QPixmap(imageUrl);
+const image = new QLabel();
+image.setPixmap(pix);
+`;
+
+<Code code={qPixmapExample} title='example_pixmap.ts' lang='ts' />
+
+Aprende mas sobre `QPixmap` en: https://doc.qt.io/qt-6/qpixmap.html

@@ -1,0 +1,25 @@
+---
+title: Button
+description: Cómo usar el componente Button en tu aplicación.
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **Button** es un widget que proporciona un botón que puedes usar en tu aplicación.
+
+## Ejemplo
+
+export const ButtonExample = `
+import { Button } from '@vixen-js/core-react';
+
+export function ButtonExample() {
+    return (
+        <Button text="Your button" onClick={ () => console.log("Button clicked!")} />
+    );
+}
+
+`;
+
+<Code code={ButtonExample} title='example_button.tsx' lang='tsx' />
+
+Aprende más sobre [`Button`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/QPushButton).

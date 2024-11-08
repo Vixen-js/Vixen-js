@@ -1,0 +1,24 @@
+---
+title: SpinBox
+description: Cómo usar el componente SpinBox en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **SpinBox** es un widget que proporciona un spin box que puedes usar en tu aplicación.
+
+## Example
+
+export const spinBoxExample = `
+import { SpinBox } from '@vixen-js/core-react';
+
+export function SpinBoxExample() {
+    return (
+        <SpinBox range={{ minimum: 0, maximum: 100}} value={20} singleStep={1} />
+    );
+}
+`;
+
+<Code code={spinBoxExample} title='example_spinBox.tsx' lang='tsx' />
+
+Aprende más sobre [`SpinBox`](https://vixen-js.github.io/docs/build-application-vanilla/Basic-Widgets/QSpinBox).

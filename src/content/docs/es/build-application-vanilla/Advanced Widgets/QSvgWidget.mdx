@@ -1,0 +1,27 @@
+---
+title: QSvgWidget
+description: Cómo usar QSvgWidget en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QSvgWidget** es un widget que proporciona un SVG que puedes utilizar en tu aplicación.
+
+## Ejemplo
+
+export const qSvgWidgetExample = `
+import fs from "fs";
+import { QSvgWidget } from '@vixen-js/core';
+
+const svg = new QSvgWidget();
+svg.load("./assets/image.svg");
+// o
+fs.readFile("./assets/image.svg", (err, buff) => {
+    if (err) throw err;
+    svg.load(buff);
+});
+`;
+
+<Code code={qSvgWidgetExample} title='example_qSvgWidget.ts' lang='ts' />
+
+Aprende mas sobre `QSvgWidget` en: https://doc.qt.io/qt-6/qsvgwidget.html

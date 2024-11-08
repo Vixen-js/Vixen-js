@@ -1,0 +1,33 @@
+---
+title: GridView
+description: Cómo usar el componente GridView en tu aplicación.
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **GridView** es un layout que organiza widgets en una grilla.
+
+## Ejemplo
+
+export const gridLayoutExample = `
+import { GridView, GridRow, GridColumn, Text } from '@vixen-js/core-react';
+
+export function gridLayoutExample() {
+    return (
+        <GridView>
+            <GridRow>
+                <GridColumn><Text>Hello World</Text></GridColumn>
+                <GridColumn><Text>Hello World</Text></GridColumn>
+            </GridRow>
+            <GridRow>
+                <GridColumn ><Text>Hello World</Text></GridColumn>
+                <GridColumn ><Text>Hello World</Text></GridColumn>
+            </GridRow>
+        </GridView>
+    )
+}
+`;
+
+<Code code={gridLayoutExample} title='example_grid.tsx' lang='tsx' />
+
+Aprende mas sobre [`GridView`](https://vixen-js.github.io/docs/build-application-vanilla/Layout-Components/QGridLayout).

@@ -1,0 +1,23 @@
+---
+title: QApplication
+description: Cómo usar QApplication en tu aplicación
+---
+import { Code } from '@astrojs/starlight/components';
+
+> El componente **QApplication** gestiona el control de la aplicación y sus ajustes principales.
+
+Nunca vas a necesitar una instancia de éste manualmente. Vixen-js lo hace por ti.
+Puedes acceder a la instancia de éste en caso de ser necesario.
+
+## Ejemplo
+
+export const qApplicationExample = `
+import { QApplication } from '@vixen-js/core';
+
+const appInstance = QApplication.instance();
+appInstance.quit();
+`;
+
+<Code code={qApplicationExample} title='example_application.ts' lang='ts' />
+
+Aprende mas sobre `QApplication` en: https://doc.qt.io/qt-6/qapplication.html

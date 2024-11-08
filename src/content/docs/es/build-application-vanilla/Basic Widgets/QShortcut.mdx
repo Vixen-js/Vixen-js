@@ -1,0 +1,32 @@
+---
+title: QShortcut
+description: Cómo usar QShortcut en tu aplicación
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+> **QShortcut** es un widget que proporciona un QShortcut que puedes utilizar en tu aplicación.
+
+## Ejemplo
+
+export const qShortcutExample = `
+import { QShortcut, QKeySequence, QMainWindow } from '@vixen-js/core';
+
+const win = new QMainWindow();
+const shortcut = new QShortcut(win);
+shortcut.setKey(QKeySequence("Ctrl+Q"));
+shortcut.setEnabled(true);
+shortcut.addEventListener("onActive", () => {
+    console.info("Atajo Activado");
+})
+
+win.show();
+
+// Evitar recolección de basura
+(global as any).win = win;
+(global as any).shortcut = shortcut;
+`;
+
+<Code code={qShortcutExample} title='example_shortcut.ts' lang='ts' />
+
+Aprende mas sobre `QShortcut` en: https://doc.qt.io/qt-6/qshortcut.html
